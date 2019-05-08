@@ -10,7 +10,7 @@ script:
 
 after_success:
 - export SOURCE_COMMIT=$(git log --pretty=format:'%h' -n 1)
-- git remote add github https://$GITHUB_PERSONAL_ACCESS_TOKEN@github.com/$TRAVIS_REPO_SLUG.git
+- git clone https://gitlab-ci-token:-LPUnZhYX7up9V6aksZ3@gitlab.com/LyftGalactic/auth-manager.git 
 - git fetch github
 - mv content ~
 - git checkout github/content -b content
